@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const engineerController = require("../controllers/engineerController");
 
+router.get('/username/:username', engineerController.getEngineerByUsername);
+
 router.get("/", engineerController.getAllEngineers);
 router.get("/:id", engineerController.getEngineerById); 
 router.post("/", engineerController.createEngineer);
