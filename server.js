@@ -11,9 +11,9 @@ dotenv.config();
 
 // Middleware
 app.use(cors({
-  origin: "*", // or use your frontend's URL for more security
+  origin: "https://resource-manager-frontend.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
 app.use(express.json());
